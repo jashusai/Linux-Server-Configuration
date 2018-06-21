@@ -72,6 +72,8 @@ k7+tPyi2MIXL7h6N2J8bazEArhLagCEQTn9amlnLemOmzQdWh70=
               ssh -i .ssh/id_rsa -p 2200 grader@ipaddress
 #### disabling root as login:
               sudo nano /etc/ssh/sshd_config
+              sudo apt-get update
+              sudo apt-get dist-upgrade
 #### prohibiting root:
                PermitRootLogin Prohibited Pasword to "no"
 #### Deny all incoming requests except for SSH(2200), HTTP and NTP:
