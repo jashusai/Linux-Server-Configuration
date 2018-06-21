@@ -74,6 +74,9 @@ k7+tPyi2MIXL7h6N2J8bazEArhLagCEQTn9amlnLemOmzQdWh70=
               sudo nano /etc/ssh/sshd_config
 #### prohibiting root:
                PermitRootLogin Prohibited Pasword to "no"
+#### Deny all incoming requests except for SSH(2200), HTTP and NTP:
+              sudo ufw default deny incoming
+
 #### Firewall safety commands:
                 sudo ufw allow 2200/tcp
                 sudo ufw allow 80/tcp
