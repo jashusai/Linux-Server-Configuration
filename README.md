@@ -9,7 +9,7 @@ This project is about Linux-Server-Configuration
       sudo apt-get update
       sudo apt-get dist-upgrade
 #### grader key:
-      -----BEGIN RSA PRIVATE KEY-----
+-----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEA79meIUVsys61bU2xBmXXrDKkiTLWYuNhGr8FA672ezx3puvM
 BrRraZwdQBk737UBLR5nHY7zLn/UjVoX4rLlrbqRYlUgRSKZVZw9jCK4JFIqNEuG
 E55OHM4BeZHbbmoQVEtmaNsZNB6l19h+Lc0vrsbh8l9adqhzjw/vhTL7qW0wrj0L
@@ -78,6 +78,7 @@ k7+tPyi2MIXL7h6N2J8bazEArhLagCEQTn9amlnLemOmzQdWh70=
               sudo ufw default deny incoming
 
 #### Firewall safety commands:
+                sudo ufw default deny incoming
                 sudo ufw allow 2200/tcp
                 sudo ufw allow 80/tcp
                 sudo ufw allow 123/udp
