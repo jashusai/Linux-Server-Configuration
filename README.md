@@ -7,7 +7,7 @@ This project is about Linux-Server-Configuration
       1
 #### to update to latest versions:
       sudo apt-get update
-      sudo apt-get upgrade
+      sudo apt-get dist-upgrade
 #### grader key:
       -----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEA79meIUVsys61bU2xBmXXrDKkiTLWYuNhGr8FA672ezx3puvM
@@ -72,7 +72,8 @@ k7+tPyi2MIXL7h6N2J8bazEArhLagCEQTn9amlnLemOmzQdWh70=
               ssh -i .ssh/id_rsa -p 2200 grader@ipaddress
 #### disabling root as login:
               sudo nano /etc/ssh/sshd_config
-              make change of PermitRootLogin to 'no'
+#### prohibiting root:
+               PermitRootLogin Prohibited Pasword to "no"
 #### Firewall safety commands:
                 sudo ufw allow 2200/tcp
                 sudo ufw allow 80/tcp
@@ -80,6 +81,9 @@ k7+tPyi2MIXL7h6N2J8bazEArhLagCEQTn9amlnLemOmzQdWh70=
                 sudo ufw enable
 #### check status
         run "sudo ufw status"
+#### Again update if any pakages are pending:
+      sudo apt-get update
+      sudo apt-get dist-upgrade
 #### Installing Apache2:
         sudo apt-get install apache2
         sudo apt-get install python-setuptools libapache2-mod-wsgi
